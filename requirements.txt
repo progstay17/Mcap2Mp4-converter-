@@ -1,0 +1,6 @@
+# Runtime
+zstandard
+lz4
+protobuf
+openpyxl
+PySide6

@@ -1,0 +1,23 @@
+{
+  "app.title": "Konverter MCAP ke MP4",
+  "btn.start": "Mulai",
+  "btn.pause": "Jeda",
+  "btn.resume": "Lanjut",
+  "btn.cancel": "Batal",
+  "btn.scan": "Pindai",
+  "btn.open_output": "Buka folder output",
+  "btn.export_report": "Ekspor laporan",
+  "label.source": "Folder sumber",
+  "label.output": "Lokasi output",
+  "label.language": "Bahasa",
+  "status.pending": "Menunggu",
+  "status.running": "Memproses",
+  "status.done": "Sukses",
+  "status.skipped": "Dilewati",
+  "status.incomplete": "Tidak lengkap",
+  "status.out_of_sync": "Tidak sinkron",
+  "status.failed": "Gagal",
+  "msg.disk_low": "Ruang disk tidak cukup.",
+  "msg.output_inside_source": "Folder output tidak boleh berada di dalam folder sumber.",
+  "msg.not_implemented": "Belum diimplementasikan."
+}

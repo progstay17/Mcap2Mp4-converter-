@@ -1,0 +1,23 @@
+{
+  "app.title": "MCAP 转 MP4 转换器",
+  "btn.start": "开始",
+  "btn.pause": "暂停",
+  "btn.resume": "继续",
+  "btn.cancel": "取消",
+  "btn.scan": "扫描",
+  "btn.open_output": "打开输出文件夹",
+  "btn.export_report": "导出报告",
+  "label.source": "源文件夹",
+  "label.output": "输出位置",
+  "label.language": "语言",
+  "status.pending": "等待中",
+  "status.running": "处理中",
+  "status.done": "成功",
+  "status.skipped": "已跳过",
+  "status.incomplete": "不完整",
+  "status.out_of_sync": "不同步",
+  "status.failed": "失败",
+  "msg.disk_low": "磁盘空间不足。",
+  "msg.output_inside_source": "输出文件夹不能位于源文件夹内部。",
+  "msg.not_implemented": "尚未实现。"
+}

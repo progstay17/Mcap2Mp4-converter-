@@ -1,0 +1,1 @@
+Taruh file .mcap contoh (jangan di-commit) untuk uji M1: satu protobuf multi-channel dan satu ROS2.

@@ -1,0 +1,23 @@
+{
+  "app.title": "MCAP to MP4 Converter",
+  "btn.start": "Start",
+  "btn.pause": "Pause",
+  "btn.resume": "Resume",
+  "btn.cancel": "Cancel",
+  "btn.scan": "Scan",
+  "btn.open_output": "Open output folder",
+  "btn.export_report": "Export report",
+  "label.source": "Source folder",
+  "label.output": "Output location",
+  "label.language": "Language",
+  "status.pending": "Pending",
+  "status.running": "Processing",
+  "status.done": "Success",
+  "status.skipped": "Skipped",
+  "status.incomplete": "Incomplete",
+  "status.out_of_sync": "Out of sync",
+  "status.failed": "Failed",
+  "msg.disk_low": "Not enough disk space.",
+  "msg.output_inside_source": "The output folder cannot be inside the source folder.",
+  "msg.not_implemented": "Not implemented yet."
+}

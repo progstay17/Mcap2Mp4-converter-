@@ -1,0 +1,5 @@
+ExifTool (mesin metadata) untuk aplikasi ini.
+Yang disertakan: exiftool.exe + folder exiftool_files (Perl portabel, modul, LICENSE bawaan) apa adanya.
+ExifToolGUI (antarmuka pihak ketiga) TIDAK disertakan.
+Jalankan dari aplikasi lewat: exiftool.exe -stay_open True -@ - (lihat docs/PORTING_NOTES.md).
+Jangan memangkas exiftool_files: ExifTool memuat modul secara dinamis.

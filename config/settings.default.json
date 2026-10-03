@@ -1,0 +1,44 @@
+{
+  "source_dir": "",
+  "recursive": true,
+  "channels": "all",
+  "output_mode": "folder",
+  "output_dir": "",
+  "mirror_structure": true,
+  "sidecar_dir": null,
+  "reports_dir": null,
+  "temp_dir": null,
+  "name_pattern": null,
+  "on_name_collision": "number",
+  "fps_mode": "timestamp",
+  "fps_value": null,
+  "co64": "auto",
+  "on_exists": "skip",
+  "sync": {
+    "policy": "strict",
+    "tolerance_frames": 0.5
+  },
+  "workers": 2,
+  "ram_limit_mb": 512,
+  "verify": "quick",
+  "after_success": "keep",
+  "faststart": false,
+  "metadata": {
+    "level": "full",
+    "sidecar_json": true,
+    "embed_native": true,
+    "embed_exiftool": false
+  },
+  "filename_pattern_regex": null,
+  "reports": {
+    "formats": [
+      "csv",
+      "json"
+    ],
+    "csv_delimiter": ",",
+    "language": null
+  },
+  "tag_values": "both",
+  "exiftool_path": null,
+  "language": "id"
+}

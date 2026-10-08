@@ -1,0 +1,18 @@
+name: build-windows
+on: [workflow_dispatch, push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements-dev.txt
+      - run: choco install nsis -y --no-progress
+      - run: pyinstaller build/mcap2mp4.spec --noconfirm
+      - run: dist\MCAP2MP4\mcap2mp4-cli.exe --version
+      - run: |
+          New-Item -ItemType Directory -Force dist\installer | Out-Null
+          & "C:\Program Files (x86)\NSIS\makensis.exe" "-DVERSION=0.2.0" build\installer.nsi
+      - uses: actions/upload-artifact@v4
+        with: { name: MCAP2MP4-Setup, path: dist/installer/*.exe }

@@ -1,6 +1,6 @@
 # Runtime
 zstandard
 lz4
-protobuf
 openpyxl
-PySide6
+# GUI: pin <6.10 (6.10+ memakai icuuc.dll; 6.9.x teruji penuh di Windows/Wine)
+PySide6-Essentials>=6.8,<6.10

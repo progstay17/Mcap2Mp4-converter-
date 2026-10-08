@@ -1,5 +1,6 @@
 """Pengaturan bawaan sesuai PRD §7. Nilai JSON-serializable."""
 from __future__ import annotations
+import copy
 import json
 from pathlib import Path
 
@@ -35,7 +36,14 @@ def _merge(base, over):
 
 def load(path=None) -> dict:
     over = json.loads(Path(path).read_text(encoding="utf-8")) if path and Path(path).exists() else {}
-    return _merge(DEFAULTS, over)
+    return _merge(copy.deepcopy(DEFAULTS), over)
 
 def save(settings: dict, path) -> None:
     Path(path).write_text(json.dumps(settings, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def user_config_path() -> Path:
+    """Lokasi pengaturan pengguna: %APPDATA%\\MCAP2MP4 di Windows, ~/.config/mcap2mp4 selain itu."""
+    import os
+    base = os.environ.get("APPDATA")
+    return (Path(base) / "MCAP2MP4" if base else Path.home() / ".config" / "mcap2mp4") / "settings.json"

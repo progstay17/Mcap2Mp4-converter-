@@ -1,9 +1,11 @@
 """Pemuat bahasa (PRD §6.9). Semua teks UI/laporan/CLI diambil lewat t()."""
 from __future__ import annotations
 import json
+import sys
 from pathlib import Path
 
-I18N_DIR = Path(__file__).resolve().parents[2] / "i18n"
+_ROOT = Path(getattr(sys, "_MEIPASS", "")) if getattr(sys, "frozen", False) else Path(__file__).resolve().parents[2]
+I18N_DIR = _ROOT / "i18n"
 _cache: dict[str, dict] = {}
 _lang = "id"
 FALLBACK = "id"

@@ -469,3 +469,4 @@ L<Image::ExifTool::DjVu(3pm)|Image::ExifTool::DjVu>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

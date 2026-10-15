@@ -2975,3 +2975,4 @@ AUTHOR
 SEE ALSO
     Image::ExifTool(3pm), Image::ExifTool::TagNames(3pm),
     Image::ExifTool::Shortcuts(3pm), Image::ExifTool::Shift.pl
+

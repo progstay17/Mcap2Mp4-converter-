@@ -454,3 +454,4 @@ L<Image::ExifTool::TagNames/VCard VCalendar Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

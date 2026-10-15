@@ -400,3 +400,4 @@ L<Image::ExifTool::TagNames/Palm Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

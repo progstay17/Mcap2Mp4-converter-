@@ -36,7 +36,7 @@ sub new {
 	# Create the object
 	my $self = bless { }, $class;
 
-	# Map the
+	# Map the 
 	my $cpan = $parent->portable_cpan;
 	my $root = $parent->dist_root;
 	foreach my $key ( sort keys %$cpan ) {

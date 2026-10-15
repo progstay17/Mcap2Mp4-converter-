@@ -212,3 +212,4 @@ L<Image::ExifTool::TagNames/ITC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -656,3 +656,4 @@ their IO::Handle counterparts, so we have comparable
 functionality to IO::String.
 
 =cut
+

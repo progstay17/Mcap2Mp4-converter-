@@ -338,3 +338,4 @@ L<Image::ExifTool::TagNames/MRC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

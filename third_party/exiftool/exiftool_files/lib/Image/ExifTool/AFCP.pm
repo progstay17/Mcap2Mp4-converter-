@@ -278,3 +278,4 @@ L<Image::ExifTool::TagNames/AFCP Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

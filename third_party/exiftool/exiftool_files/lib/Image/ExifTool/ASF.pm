@@ -898,3 +898,4 @@ L<Image::ExifTool::TagNames/ASF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

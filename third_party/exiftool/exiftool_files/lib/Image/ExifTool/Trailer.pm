@@ -315,3 +315,4 @@ L<Image::ExifTool::TagNames/Trailer Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

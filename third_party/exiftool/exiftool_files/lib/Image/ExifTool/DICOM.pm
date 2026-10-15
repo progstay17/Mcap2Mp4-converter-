@@ -8079,3 +8079,4 @@ L<Image::ExifTool::TagNames/DICOM Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

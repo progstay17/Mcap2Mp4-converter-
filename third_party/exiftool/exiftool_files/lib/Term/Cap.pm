@@ -769,3 +769,4 @@ kb=\0177:
 r2=\E>\E[24;1H\E[?3l\E[?4l\E[?5l\E[?7h\E[?8h\E=:rc=\E8:
 sc=\E7:se=\E[27m:sf=\ED:so=\E[7m:sr=\EM:ta=^I:
 ue=\E[24m:up=\E[A:us=\E[4m:ve=\E[?25h:vi=\E[?25l:
+

@@ -2270,3 +2270,4 @@ L<Image::ExifTool::TagNames/RIFF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

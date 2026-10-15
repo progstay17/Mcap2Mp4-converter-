@@ -258,3 +258,4 @@ L<Image::ExifTool::TagNames/FotoStation Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

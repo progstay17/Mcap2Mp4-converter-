@@ -790,3 +790,4 @@ under the same terms as Perl itself.
 L<Image::ExifTool::TagNames/ZIP RAR5 Tags>
 
 =cut
+

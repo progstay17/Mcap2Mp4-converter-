@@ -284,3 +284,4 @@ L<Image::ExifTool::TagNames/APE Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

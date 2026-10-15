@@ -417,7 +417,7 @@ numerical, and generated automatically otherwise.
                   or the RawConv should return undef so the tag is not normally
                   seen by the user. Set to 2 to bypass BuildTagLookup() warning
                   about violating these guidelines, or 0 to avoid being hidden
-                  automaticallly when added at runtime with AddTagToTable().
+                  automaticallly when added at runtime with AddTagToTable(). 
                   Finally, setting to '' disables inclusion of the PrintConv
                   lookup in the documentation (for dynamically-added lookups,
                   eg. DICOM).

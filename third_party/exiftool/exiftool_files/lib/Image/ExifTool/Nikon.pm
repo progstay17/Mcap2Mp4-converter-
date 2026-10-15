@@ -9353,7 +9353,7 @@ my %nikonFocalConversions = (
     106 => {
         Name => 'AutoCaptureCriteriaSubjectType',
         Condition => '$$self{AutoCapturedFrame} and $$self{AutoCapturedFrame} ne 0',
-        ValueConv => '$val + 1',    # change value range to align with %subjectDetectionZ9
+        ValueConv => '$val + 1',    # change value range to align with %subjectDetectionZ9 
         ValueConvInv => '$val - 1',
         PrintConv => \%subjectDetectionZ9,
     },

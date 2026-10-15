@@ -22,7 +22,7 @@ sub new {
 	# Create the object
 	my $self = bless { }, $class;
 
-	# Map the
+	# Map the 
 	my $homedir = $parent->portable_homedir;
 	my $root    = $parent->dist_root;
 	foreach my $key ( sort keys %$homedir ) {

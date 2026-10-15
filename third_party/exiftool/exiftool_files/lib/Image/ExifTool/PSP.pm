@@ -303,3 +303,4 @@ L<Image::ExifTool::TagNames/PSP Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

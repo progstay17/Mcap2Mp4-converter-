@@ -238,3 +238,4 @@ L<Image::ExifTool::TagNames/Ogg Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

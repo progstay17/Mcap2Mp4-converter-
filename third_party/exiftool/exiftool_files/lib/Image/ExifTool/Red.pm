@@ -332,3 +332,4 @@ L<Image::ExifTool::TagNames/Red Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

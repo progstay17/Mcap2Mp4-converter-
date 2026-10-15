@@ -203,3 +203,4 @@ L<Image::ExifTool::TagNames/ISO Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

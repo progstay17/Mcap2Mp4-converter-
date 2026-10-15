@@ -250,3 +250,4 @@ L<Image::ExifTool::TagNames/BPG Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

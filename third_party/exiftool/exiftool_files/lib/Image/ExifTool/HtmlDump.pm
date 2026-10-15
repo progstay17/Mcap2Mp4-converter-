@@ -930,3 +930,4 @@ under the same terms as Perl itself.
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

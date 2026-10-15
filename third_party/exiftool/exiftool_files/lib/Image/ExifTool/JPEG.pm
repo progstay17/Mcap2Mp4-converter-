@@ -832,3 +832,4 @@ L<Image::ExifTool::TagNames/JPEG Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

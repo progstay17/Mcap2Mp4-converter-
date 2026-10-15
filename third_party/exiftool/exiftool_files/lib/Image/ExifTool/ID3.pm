@@ -1772,3 +1772,4 @@ L<Image::ExifTool::TagNames/ID3 Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

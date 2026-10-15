@@ -758,3 +758,4 @@ L<Image::ExifTool::TagNames/MacOS Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

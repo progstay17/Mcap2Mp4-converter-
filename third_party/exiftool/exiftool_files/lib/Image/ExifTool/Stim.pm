@@ -193,3 +193,4 @@ L<Image::ExifTool::TagNames/Stim Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

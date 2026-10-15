@@ -232,3 +232,4 @@ L<Image::ExifTool::TagNames/ZIP Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

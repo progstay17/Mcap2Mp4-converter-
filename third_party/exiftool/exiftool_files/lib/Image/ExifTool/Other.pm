@@ -90,3 +90,4 @@ L<Image::ExifTool::TagNames/Other Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

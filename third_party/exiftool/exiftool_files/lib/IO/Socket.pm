@@ -80,7 +80,7 @@ sub socket {
     my($sock,$domain,$type,$protocol) = @_;
 
     socket($sock,$domain,$type,$protocol) or
-	return undef;
+    	return undef;
 
     ${*$sock}{'io_socket_domain'} = $domain;
     ${*$sock}{'io_socket_type'}   = $type;
@@ -101,7 +101,7 @@ sub socketpair {
     my $sock2 = $class->new();
 
     socketpair($sock1,$sock2,$domain,$type,$protocol) or
-	return ();
+    	return ();
 
     ${*$sock1}{'io_socket_type'}  = ${*$sock2}{'io_socket_type'}  = $type;
     ${*$sock1}{'io_socket_proto'} = ${*$sock2}{'io_socket_proto'} = $protocol;
@@ -260,7 +260,7 @@ sub accept {
     ${*$new}{$_} = ${*$sock}{$_} for qw( io_socket_domain io_socket_type io_socket_proto );
 
     return wantarray ? ($new, $peer)
-		     : $new;
+    	      	     : $new;
 }
 
 sub sockname {

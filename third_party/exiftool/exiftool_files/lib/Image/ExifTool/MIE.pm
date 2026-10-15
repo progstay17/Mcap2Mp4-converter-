@@ -2580,3 +2580,4 @@ L<Image::ExifTool::TagNames/MIE Tags>, L<Image::ExifTool::MIEUnits>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

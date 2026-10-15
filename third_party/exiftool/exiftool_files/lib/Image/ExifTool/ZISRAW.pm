@@ -239,3 +239,4 @@ L<Image::ExifTool::TagNames/ZISRAW Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

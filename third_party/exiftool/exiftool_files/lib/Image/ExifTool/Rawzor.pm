@@ -187,3 +187,4 @@ L<Image::ExifTool::TagNames/Rawzor Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

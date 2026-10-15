@@ -1781,7 +1781,7 @@ sub ProcessLNK($$)
             Size    => $len,
         );
     }
-
+    
     # read string data
     my @strings = qw(Description RelativePath WorkingDirectory
                      CommandLineArguments IconFileName);
@@ -1899,3 +1899,4 @@ L<Image::ExifTool::TagNames/LNK Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

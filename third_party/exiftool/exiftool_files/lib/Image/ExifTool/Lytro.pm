@@ -211,3 +211,4 @@ L<Image::ExifTool::TagNames/Lytro Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -241,3 +241,4 @@ L<Image::ExifTool::TagNames/Text Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -140,3 +140,4 @@ L<Image::ExifTool::TagNames/ICO Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -390,3 +390,4 @@ L<Image::ExifTool::TagNames/SonyIDC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

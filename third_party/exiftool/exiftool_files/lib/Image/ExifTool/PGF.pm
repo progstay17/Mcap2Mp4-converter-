@@ -140,3 +140,4 @@ L<Image::ExifTool::TagNames/PGF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

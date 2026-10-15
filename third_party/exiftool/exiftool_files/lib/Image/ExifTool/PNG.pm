@@ -1730,3 +1730,4 @@ L<Image::ExifTool::TagNames/MNG Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

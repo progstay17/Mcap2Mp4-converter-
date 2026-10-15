@@ -1514,13 +1514,13 @@ sub maybe_parens_unop {
     my($name, $kid, $cx) = @_;
     if ($cx > 16 or $self->{'parens'}) {
 	$kid =  $self->deparse($kid, 1);
-	if ($name eq "umask" && $kid =~ /^\d+$/) {
+ 	if ($name eq "umask" && $kid =~ /^\d+$/) {
 	    $kid = sprintf("%#o", $kid);
 	}
 	return $self->keyword($name) . "($kid)";
     } else {
 	$kid = $self->deparse($kid, 16);
-	if ($name eq "umask" && $kid =~ /^\d+$/) {
+ 	if ($name eq "umask" && $kid =~ /^\d+$/) {
 	    $kid = sprintf("%#o", $kid);
 	}
 	$name = $self->keyword($name);
@@ -2429,7 +2429,7 @@ sub real_negate {
 	# avoid --$x
 	$self->pfixop($op, $cx, "-", 21.5);
     } else {
-	$self->pfixop($op, $cx, "-", 21);
+	$self->pfixop($op, $cx, "-", 21);	
     }
 }
 sub pp_i_negate { pp_negate(@_) }
@@ -2440,7 +2440,7 @@ sub pp_not {
     if ($cx <= 4) {
 	$self->listop($op, $cx, "not", $op->first);
     } else {
-	$self->pfixop($op, $cx, "!", 21);
+	$self->pfixop($op, $cx, "!", 21);	
     }
 }
 
@@ -2450,10 +2450,10 @@ sub unop {
     my $kid;
     if ($op->flags & OPf_KIDS) {
 	$kid = $op->first;
-	if (not $name) {
-	    # this deals with 'boolkeys' right now
-	    return $self->deparse($kid,$cx);
-	}
+ 	if (not $name) {
+ 	    # this deals with 'boolkeys' right now
+ 	    return $self->deparse($kid,$cx);
+ 	}
 	my $builtinname = $name;
 	$builtinname =~ /^CORE::/ or $builtinname = "CORE::$name";
 	if (defined prototype($builtinname)
@@ -2471,7 +2471,7 @@ sub unop {
 	    return $self->maybe_parens(
 			$self->keyword($name) . " $kid", $cx, 16
 		   );
-	}
+	}   
 	return $self->maybe_parens_unop($name, $kid, $cx);
     } else {
 	return $self->maybe_parens(
@@ -2511,7 +2511,7 @@ sub pp_each { unop(@_, "each") }
 sub pp_values { unop(@_, "values") }
 sub pp_keys { unop(@_, "keys") }
 { no strict 'refs'; *{"pp_r$_"} = *{"pp_$_"} for qw< keys each values >; }
-sub pp_boolkeys {
+sub pp_boolkeys { 
     # no name because its an optimisation op that has no keyword
     unop(@_,"");
 }
@@ -2745,7 +2745,7 @@ sub pp_anonlist {
 *pp_anonhash = \&pp_anonlist;
 
 sub pp_refgen {
-    my $self = shift;
+    my $self = shift;	
     my($op, $cx) = @_;
     my $kid = $op->first;
     if ($kid->name eq "null") {
@@ -2947,7 +2947,7 @@ sub deparse_binop_left {
     {
 	return $self->deparse($left, $prec - .00001);
     } else {
-	return $self->deparse($left, $prec);
+	return $self->deparse($left, $prec);	
     }
 }
 
@@ -2981,7 +2981,7 @@ sub deparse_binop_right {
     {
 	return $self->deparse($right, $prec - .00001);
     } else {
-	return $self->deparse($right, $prec);
+	return $self->deparse($right, $prec);	
     }
 }
 
@@ -3849,7 +3849,7 @@ sub pp_list {
         }
 	return "$local(" . join(", ", @exprs) . ")";
     } else {
-	return $self->maybe_parens( join(", ", @exprs), $cx, 6);
+	return $self->maybe_parens( join(", ", @exprs), $cx, 6);	
     }
 }
 
@@ -4350,7 +4350,7 @@ sub is_subscriptable {
 	$kid = $kid->first;
 	return 0 if $kid->name eq "gv" || $kid->name eq "padcv";
 	return 0 if is_scalar($kid);
-	return is_subscriptable($kid);
+	return is_subscriptable($kid);	
     } else {
 	return 0;
     }
@@ -4427,7 +4427,7 @@ sub elem {
 
     $idx = $self->elem_or_slice_single_index($idx);
 
-    unless ($array->name eq $padname) { # Maybe this has been fixed
+    unless ($array->name eq $padname) { # Maybe this has been fixed	
 	$array = $array->first; # skip rv2av (or ex-rv2av in _53+)
     }
     if (my $array_name=$self->elem_or_slice_array_name
@@ -5473,7 +5473,7 @@ sub const {
 		}
 	    }
 	}
-
+	
 	my $const = $self->const($ref, 20);
 	if ($self->{in_subst_repl} && $const =~ /^[0-9]/) {
 	    $const = "($const)";
@@ -5651,7 +5651,7 @@ sub double_delim {
 	}
 	$from =~ s[/][\\/]g;
 	$to =~ s[/][\\/]g;
-	return "/$from/$to/";
+	return "/$from/$to/";	
     }
 }
 
@@ -6324,7 +6324,7 @@ sub pp_subst {
 	if ($pmflags & PMf_EVAL) {
 	    $repl = $self->deparse($repl->first, 0);
 	} else {
-	    $repl = $self->dq($repl);
+	    $repl = $self->dq($repl);	
 	}
     }
     if (not null my $code_list = $op->code_list) {
@@ -6345,7 +6345,7 @@ sub pp_subst {
 				   . double_delim($re, $repl) . $flags,
 				   $cx, 20);
     } else {
-	return "$core_s". double_delim($re, $repl) . $flags;
+	return "$core_s". double_delim($re, $repl) . $flags;	
     }
 }
 

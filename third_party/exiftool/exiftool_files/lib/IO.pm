@@ -15,7 +15,7 @@ sub import {
 
     warnings::warnif('deprecated', qq{Parameterless "use IO" deprecated})
         if @_ == 0 ;
-
+    
     my @l = @_ ? @_ : qw(Handle Seekable File Pipe Socket Dir);
 
     local @INC = @INC;
@@ -67,3 +67,4 @@ IO::Socket, IO::Dir.  You should instead explicitly import the IO
 modules you want.
 
 =cut
+

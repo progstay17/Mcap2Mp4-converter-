@@ -866,3 +866,4 @@ L<Image::ExifTool::TagNames/OOXML Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -17,13 +17,13 @@ sub splitpath {
     my ($path, $nofile) = @_;
     my ($volume,$directory,$file) = ('','','');
     if ( $nofile ) {
-        $path =~
+        $path =~ 
             m{^ ( $VOL_RX ? ) (.*) }sox;
         $volume    = $1;
         $directory = $2;
     }
     else {
-        $path =~
+        $path =~ 
             m{^ ( $VOL_RX ? )
                 ( (?:.*[\\/](?:\.\.?\Z(?!\n))?)? )
                 (.*)
@@ -48,7 +48,7 @@ sub splitdir {
     }
     else {
         #
-        # since there was a trailing separator, add a file name to the end,
+        # since there was a trailing separator, add a file name to the end, 
         # then do the split, then replace it with ''.
         #
         my( @directories )= split( m|[\\/]|, "${directories}dummy" ) ;
@@ -70,7 +70,7 @@ sub catpath {
 
     $volume .= $directory ;
 
-    # If the volume is not just A:, make sure the glue separator is
+    # If the volume is not just A:, make sure the glue separator is 
     # there, reusing whatever separator is first in the $volume if possible.
     if ( $volume !~ m@^[a-zA-Z]:\Z(?!\n)@s &&
          $volume =~ m@[^\\/]\Z(?!\n)@      &&
@@ -116,10 +116,10 @@ sub _canon_cat {
     my ($first, @rest) = @_;
 
     my $volume = $first =~ s{ \A ([A-Za-z]:) ([\\/]?) }{}x	# drive letter
-	       ? ucfirst( $1 ).( $2 ? "\\" : "" )
+    	       ? ucfirst( $1 ).( $2 ? "\\" : "" )
 	       : $first =~ s{ \A (?:\\\\|//) ([^\\/]+)
 				 (?: [\\/] ([^\\/]+) )?
-				 [\\/]? }{}xs			# UNC volume
+	       			 [\\/]? }{}xs			# UNC volume
 	       ? "\\\\$1".( defined $2 ? "\\$2" : "" )."\\"
 	       : $first =~ s{ \A [\\/] }{}x			# root dir
 	       ? "\\"
@@ -128,7 +128,7 @@ sub _canon_cat {
 
     $path =~ tr#\\/#\\\\#s;		# xx/yy --> xx\yy & xx\\yy --> xx\yy
 
-					# xx/././yy --> xx/yy
+    					# xx/././yy --> xx/yy
     $path =~ s{(?:
 		(?:\A|\\)		# at begin or after a slash
 		\.
@@ -142,12 +142,12 @@ sub _canon_cat {
     #     Then .... could easily become ../../.. etc:
     # Replace \.\.\. by (\.\.\.+)  and substitute with
     # { $1 . ".." . "\\.." x (length($2)-2) }gex
-					# ... --> ../..
+	     				# ... --> ../..
     $path =~ s{ (\A|\\)			# at begin or after a slash
-		\.\.\.
+    		\.\.\.
 		(?=\\|\z) 		# at end or followed by slash
 	     }{$1..\\..}gx;
-					# xx\yy\..\zz --> xx\zz
+    					# xx\yy\..\zz --> xx\zz
     while ( $path =~ s{(?:
 		(?:\A|\\)		# at begin or after a slash
 		[^\\]+			# rip this 'yy' off

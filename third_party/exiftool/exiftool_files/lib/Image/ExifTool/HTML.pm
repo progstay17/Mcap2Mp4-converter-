@@ -580,3 +580,4 @@ L<Image::ExifTool::TagNames/HTML Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

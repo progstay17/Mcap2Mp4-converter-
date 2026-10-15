@@ -76,7 +76,7 @@ sub typedef {
         @recog_arr = recognize($type, $name);
 #http://perlmonks.org/?node_id=978468, not catching the type not found here,
 #will lead to a div 0 later
-        if(@recog_arr != 3){
+        if(@recog_arr != 3){ 
             lazycarp "Win32::API::Struct::typedef: unknown member type=\"$type\", name=\"$name\"";
             return undef;
         }
@@ -336,7 +336,7 @@ sub Pack {
      undef,     $self->{buffer_ptrs}) = $self->getPack();
 
     DEBUG "(PM)Struct::Pack: $self->{__typedef__}(buffer) = pack($packing, @$items)\n" if DEBUGCONST;
-
+    
     if($_[0]){ #Pack() on a new struct, without slice set, will cause lots of uninit
         #warnings, sometimes its intentional to set up buffer recipients for a
         #future UnPack()
@@ -438,7 +438,7 @@ else{ #new ptr is true
         " member \"".$item."\" was changed by C function,".
         " possible resource leak";
     }#create a ::Struct if the slice is undef, user had the slice set to undef
-
+    
     if (!ref($$SVMemberRef)){
         $$SVMemberRef = Win32::API::Struct->new(to_base_struct($type_names->[$i]));
         $$SVMemberRef->Pack(1); #buffer_recipients must be generated, no uninit warnings

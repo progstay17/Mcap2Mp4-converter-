@@ -27,7 +27,8 @@
     "level": "full",
     "sidecar_json": true,
     "embed_native": true,
-    "embed_exiftool": false
+    "embed_exiftool": false,
+    "embed_pairing": false
   },
   "filename_pattern_regex": null,
   "reports": {
@@ -40,5 +41,25 @@
   },
   "tag_values": "both",
   "exiftool_path": null,
-  "language": "id"
+  "language": "id",
+  "audio_in": "all",
+  "audio_codec_tag": "ipcm",
+  "audio_gap_policy": "fill",
+  "audio_gap_tolerance_ms": 1.0,
+  "audio_offset_ms": 0.0,
+  "session_mode": "per_file",
+  "session_gap_tolerance_frames": 1.5,
+  "session_max_gap_s": 2.0,
+  "session_name_pattern": "{pertama}~{terakhir}",
+  "player_hw_decode": "off",
+  "player_volume": 80,
+  "player_speed": 1.0,
+  "player_mute_above_2x": true,
+  "player_last_dir": "",
+  "player_folders": [],
+  "player_splitter": [
+    300,
+    800
+  ],
+  "player_sync_threshold_ms": 40
 }

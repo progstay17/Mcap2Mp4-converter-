@@ -47,7 +47,7 @@ $do_expand = 0;
 @dl_library_path    = ();       # path to look for files
 
 #XSLoader.pm may have added elements before we were required
-#@dl_shared_objects  = ();       # shared objects for symbols we have
+#@dl_shared_objects  = ();       # shared objects for symbols we have 
 #@dl_librefs         = ();       # things we have loaded
 #@dl_modules         = ();       # Modules we have loaded
 
@@ -121,7 +121,7 @@ sub bootstrap {
 	unless defined(&dl_load_file);
 
 
-
+    
     my @modparts = split(/::/,$module);
     my $modfname = $modparts[-1];
     my $modfname_orig = $modfname; # For .bs file search
@@ -131,7 +131,7 @@ sub bootstrap {
     # It may also edit @modparts if required.
     $modfname = &mod2fname(\@modparts) if defined &mod2fname;
 
-
+    
 
     my $modpname = join('/',@modparts);
 
@@ -141,15 +141,15 @@ sub bootstrap {
 
     my $dir;
     foreach (@INC) {
-
+	
 	    $dir = "$_/auto/$modpname";
-
+	
 	next unless -d $dir; # skip over uninteresting directories
-
+	
 	# check for common cases to avoid autoload of dl_findfile
         my $try = "$dir/$modfname.$dl_dlext";
 	last if $file = ($do_expand) ? dl_expandspec($try) : ((-f $try) && $try);
-
+	
 	# no luck here, save dir for possible later dl_findfile search
 	push @dirs, $dir;
     }
@@ -159,7 +159,7 @@ sub bootstrap {
     croak("Can't locate loadable object for module $module in \@INC (\@INC contains: @INC)")
 	unless $file;	# wording similar to error from 'require'
 
-
+    
     my $bootname = "boot_$module";
     $bootname =~ s/\W/_/g;
     @dl_require_symbols = ($bootname);
@@ -179,7 +179,7 @@ sub bootstrap {
 
     my $boot_symbol_ref;
 
-
+    
 
     # Many dynamic extension loading problems will appear to come from
     # this section of code: XYZ failed at line 123 of DynaLoader.pm.
@@ -189,7 +189,7 @@ sub bootstrap {
     # it executed.
 
     my $flags = $module->dl_load_flags;
-
+    
     my $libref = dl_load_file($file, $flags) or
 	croak("Can't load '$file' for module $module: ".dl_error());
 
@@ -224,14 +224,14 @@ sub dl_findfile {
     # accumulate directories but process files as they appear
     arg: foreach(@args) {
         #  Special fast case: full filepath requires no search
-
-
+	
+	
         if (m:/: && -f $_) {
 	    push(@found,$_);
 	    last arg unless wantarray;
 	    next;
 	}
-
+	
 
         # Deal with directories first:
         #  Using a -L prefix is the preferred option (faster and more robust)
@@ -241,7 +241,7 @@ sub dl_findfile {
         #  (this is a more complicated issue than it first appears)
         if (m:/: && -d $_) {   push(@dirs, $_); next; }
 
-
+	
 
         #  Only files should get this far...
         my(@names, $name);    # what filenames to look for
@@ -251,15 +251,15 @@ sub dl_findfile {
             # these should be ordered with the most likely first
             push(@names,"$_.$dl_dlext")    unless m/\.$dl_dlext$/o;
             push(@names,"$_.$dl_so")     unless m/\.$dl_so$/o;
-
+	    
             push(@names,"lib$_.$dl_so")  unless m:/:;
             push(@names, $_);
         }
 	my $dirsep = '/';
-
+	
         foreach $dir (@dirs, @dl_library_path) {
             next unless -d $dir;
-
+	    
             foreach $name (@names) {
 		my($file) = "$dir$dirsep$name";
                 print STDERR " checking in $dir for $name\n" if $dl_debug;
@@ -271,7 +271,7 @@ sub dl_findfile {
                     push(@found, $file);
                     next arg; # no need to look any further
                 }
-
+		
             }
         }
     }
@@ -333,7 +333,7 @@ DynaLoader - Dynamically load C libraries into Perl code
     __PACKAGE__->bootstrap;
 
     # optional method for 'global' loading
-    sub dl_load_flags { 0x01 }
+    sub dl_load_flags { 0x01 }     
 
 
 =head1 DESCRIPTION
@@ -520,7 +520,7 @@ names are treated as filenames to be searched for.
 
 Using arguments of the form C<-Ldir> and C<-lname> is recommended.
 
-Example:
+Example: 
 
     @dl_resolve_using = dl_findfile(qw(-L/usr/5lib -lposix));
 
@@ -548,7 +548,7 @@ Dynamically load $filename, which must be the path to a shared object
 or library.  An opaque 'library reference' is returned as a handle for
 the loaded object.  Returns undef on error.
 
-The $flags argument to alters dl_load_file behaviour.
+The $flags argument to alters dl_load_file behaviour.  
 Assigned bits:
 
  0x01  make symbols available for linking later dl_load_file's.

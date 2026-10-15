@@ -387,3 +387,4 @@ L<Image::ExifTool::TagNames/RTF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

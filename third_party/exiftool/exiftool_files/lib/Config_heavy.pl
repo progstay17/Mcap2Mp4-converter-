@@ -141,7 +141,7 @@ my $summary_expanded;
 sub myconfig {
     return $summary_expanded if $summary_expanded;
     ($summary_expanded = $summary) =~ s{\$(\w+)}
-		 {
+		 { 
 			my $c;
 			if ($1 eq 'git_ancestor_line') {
 				if ($Config::Config{git_ancestor}) {
@@ -150,9 +150,9 @@ sub myconfig {
 					$c= "";
 				}
 			} else {
-				$c = $Config::Config{$1};
+                     		$c = $Config::Config{$1}; 
 			}
-			defined($c) ? $c : 'undef'
+			defined($c) ? $c : 'undef' 
 		}ge;
     $summary_expanded;
 }
@@ -1442,7 +1442,7 @@ sub config_vars {
     # implements -V:cfgvar option (see perlrun -V:)
     foreach (@_) {
 	# find optional leading, trailing colons; and query-spec
-	my ($notag,$qry,$lncont) = m/^(:)?(.*?)(:)?$/;	# flags fore and aft,
+	my ($notag,$qry,$lncont) = m/^(:)?(.*?)(:)?$/;	# flags fore and aft, 
 	# map colon-flags to print decorations
 	my $prfx = $notag ? '': "$qry=";		# tag-prefix for print
 	my $lnend = $lncont ? ' ' : ";\n";		# line ending for print

@@ -146,3 +146,4 @@ L<Image::ExifTool::TagNames/Radiance Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

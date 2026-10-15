@@ -244,3 +244,4 @@ L<Image::ExifTool::TagNames/RSRC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

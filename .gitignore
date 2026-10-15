@@ -5,5 +5,4 @@ build/work/
 dist/
 samples/*.mcap
 *.partial
-third_party/exiftool/
-reference/legacy/
+build/version_info.generated.txt

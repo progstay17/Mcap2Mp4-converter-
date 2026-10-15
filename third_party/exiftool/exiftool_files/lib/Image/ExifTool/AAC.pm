@@ -174,3 +174,4 @@ L<Image::ExifTool::TagNames/AAC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

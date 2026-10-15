@@ -276,3 +276,4 @@ L<Image::ExifTool::TagNames/MIFF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

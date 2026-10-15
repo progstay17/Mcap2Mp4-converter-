@@ -1276,3 +1276,4 @@ L<Image::ExifTool::TagNames/Microsoft Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

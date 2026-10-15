@@ -1081,3 +1081,4 @@ L<Image::ExifTool::TagNames/M2TS Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -95,3 +95,4 @@ L<Image::ExifTool::TagNames/FLAC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

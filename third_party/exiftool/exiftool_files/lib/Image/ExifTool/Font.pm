@@ -929,3 +929,4 @@ L<Image::ExifTool::TagNames/Font Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

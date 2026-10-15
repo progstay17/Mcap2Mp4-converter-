@@ -40,7 +40,7 @@ sub new {
 		  $self->{$key} = Portable::FileSpec::catdir($root, split /\//, $conf->{$key});
 		}
 	}
-	foreach my $key ( grep { /^ld|^libpth$/ } keys %$self ) {
+	foreach my $key ( grep { /^ld|^libpth$/ } keys %$self ) { 
 		#special handling of linker config variables and libpth
 		next unless defined $self->{$key};
 		$self->{$key} =~ s/\$(\w+)/$self->{$1}/g;
@@ -78,7 +78,7 @@ sub apply {
 		no warnings;
 		*Config::STORE = delete $Config::{_TEMP};
 	}
-
+	
 	# Confirm we got all the paths
 	my $volume = quotemeta $parent->dist_volume;
 	foreach my $key ( sort keys %Config::Config ) {

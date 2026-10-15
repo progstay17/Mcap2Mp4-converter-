@@ -1692,3 +1692,4 @@ L<Image::ExifTool::TagNames/Jpeg2000 Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

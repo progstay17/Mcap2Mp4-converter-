@@ -491,3 +491,4 @@ L<Image::ExifTool::TagNames/MISB Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

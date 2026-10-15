@@ -10270,7 +10270,7 @@ sub PrintLensID(@)
         @matches = @likely unless @matches;
         @matches = @maybe unless @matches;
         # use LensModel focal length and aperture if necessary and available
-        if (@matches > 1 and $lensModel and
+        if (@matches > 1 and $lensModel and 
             $lensModel =~ /(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?) ?mm ?f\/?(\d+(?:\.\d+)?(?:-\d+(?:\.\d+)?)?)/i)
         {
             my ($mm, $fstop) = ($1, $2);
@@ -10281,7 +10281,7 @@ sub PrintLensID(@)
             }
             @matches = @best if @best;
         }
-
+        
         Image::ExifTool::Exif::MatchLensModel(\@matches, $lensModel);
         return join(' or ', @matches) if @matches;
     } elsif ($lensModel and $lensModel =~ /\d/) {

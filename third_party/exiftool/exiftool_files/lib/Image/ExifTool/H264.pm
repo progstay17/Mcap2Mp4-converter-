@@ -1146,3 +1146,4 @@ L<Image::ExifTool::TagNames/H264 Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

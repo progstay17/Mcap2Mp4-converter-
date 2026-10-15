@@ -329,3 +329,4 @@ L<Image::ExifTool::TagNames/Torrent Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -290,3 +290,4 @@ L<Image::ExifTool::TagNames/MPF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

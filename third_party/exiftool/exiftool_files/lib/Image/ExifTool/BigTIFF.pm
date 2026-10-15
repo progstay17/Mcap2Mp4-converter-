@@ -301,3 +301,4 @@ L<Image::ExifTool::TagNames/EXIF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

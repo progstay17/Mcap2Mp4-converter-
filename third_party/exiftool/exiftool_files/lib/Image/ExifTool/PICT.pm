@@ -1257,3 +1257,4 @@ L<Image::ExifTool::TagNames/PICT Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -408,3 +408,4 @@ L<Image::ExifTool::TagNames/FlashPix Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

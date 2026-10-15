@@ -941,3 +941,4 @@ L<Image::ExifTool::TagNames/GoPro Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

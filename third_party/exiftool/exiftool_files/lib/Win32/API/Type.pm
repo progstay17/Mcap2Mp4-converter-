@@ -123,7 +123,7 @@ sub typedef {
         else{
         warn "Win32::API::Type::typedef: aliasing struct \"".$_[0]
         ."\" to struct \"".$_[1]."\" not supported";
-        return undef;
+        return undef;            
         }
     }
     DEBUG "(PM)Type::typedef: packing='$packing'\n" if DEBUGCONST;
@@ -179,7 +179,7 @@ sub packing {
     my $type = ($self eq 'Win32::API::Type') ? shift : $self;
     my $name = shift;
     my $pass_numeric = shift;
-
+    
     # DEBUG "(PM)Type::packing: got '$type', '$name'\n";
     my ($modifier, $size, $packing);
     if (exists $Pointer{$type}) {

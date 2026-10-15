@@ -245,7 +245,7 @@ my %ENCODERS = (
 				    ],
 		    'ISO-2022-JP'=> [
 				     ['x-iso2022jp-ascii',
-							'Encode::EUCJPASCII'],
+				      			'Encode::EUCJPASCII'],
 				     # ['iso-2022-jp-ms','Encode::ISO2022JPMS'],
 				     # ['cp50220',      'Encode::EUCJPMS'],
 				     # ['cp50221',      'Encode::EUCJPMS'],
@@ -260,9 +260,9 @@ my %ENCODERS = (
 		    'EUC-KR'     => [['cp949'], ],      # Encode::KR
 		    'BIG5'       => [
 				     # ['big5plus',     'Encode::HanExtra'],
-				     # ['big5-2003',    'Encode::HanExtra'],
+				     # ['big5-2003',    'Encode::HanExtra'], 
 				     ['cp950'],         # Encode::TW
-				     # ['big5-1984',    'Encode::HanExtra'],
+				     # ['big5-1984',    'Encode::HanExtra'], 
 				    ],
 		    'TIS-620'    => [['cp874'], ],      # Encode::Byte
 		    'UTF-8'      => [['utf8'], ],       # Special name on Perl
@@ -292,7 +292,7 @@ my %ENCODERS = (
 );
 
 # ISO-2022-* escape sequences etc. to detect charset from unencoded data.
-my @ESCAPE_SEQS = (
+my @ESCAPE_SEQS = ( 
 		# ISO-2022-* sequences
 		   # escape seq, possible charset
 		   # Following sequences are commonly used.
@@ -316,7 +316,7 @@ my @ESCAPE_SEQS = (
 		   # Other sequences will be used with appropriate charset
 		   # parameters, or hardly used.
 
-		   # note*: This RFC defines ISO-2022-JP-1, superset of
+		   # note*: This RFC defines ISO-2022-JP-1, superset of 
 		   # ISO-2022-JP.  But that charset name is rarely used.
 		   # OTOH many of encoders for ISO-2022-JP recognize this
 		   # sequence so that comatibility with EUC-JP will be
@@ -931,7 +931,7 @@ sub _text_encode {
 	} else {
 	    $charset = __PACKAGE__->new($DEFAULT_CHARSET,
 					Mapping => 'STANDARD');
-	}
+	} 
     }
     if (!$encoding or $encoding ne 'A') { # no conversion
 	$charset = $charset->dup;

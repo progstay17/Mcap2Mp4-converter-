@@ -190,31 +190,31 @@ sub cmp_result
             $exp .= "\n" if (length($exp) and $exp !~ /\n$/);
 
             if (not $Test->ok($result->{diag} eq $exp,
-			"subtest '$sub_name' of '$name' compare diag"))
+    			"subtest '$sub_name' of '$name' compare diag"))
             {
                 $got = $result->{diag};
             }
         }
 
         if ($got) {
-		my $glen = length($got);
-		my $elen = length($exp);
-		for ($got, $exp)
-		{
-			my @lines = split("\n", $_);
-			$_ = join("\n", map {
-				if ($want_space)
-				{
-					$_ = $colour.escape($_).$reset;
-				}
-				else
-				{
-					"'$colour$_$reset'"
-				}
-			} @lines);
-		}
+    		my $glen = length($got);
+    		my $elen = length($exp);
+    		for ($got, $exp)
+    		{
+    			my @lines = split("\n", $_);
+     			$_ = join("\n", map {
+    				if ($want_space)
+    				{
+    					$_ = $colour.escape($_).$reset;
+    				}
+    				else
+    				{
+    					"'$colour$_$reset'"
+    				}
+    			} @lines);
+    		}
 
-		$Test->diag(<<EOM);
+        	$Test->diag(<<EOM);
 Got diag ($glen bytes):
 $got
 Expected diag ($elen bytes):

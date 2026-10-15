@@ -38,7 +38,7 @@ BEGIN {
     WriteMemory SafeReadWideCString ); # symbols to export on request
 
     use Scalar::Util qw( looks_like_number weaken);
-
+    
     sub ERROR_NOACCESS	() { 998 }
     sub ERROR_NOT_ENOUGH_MEMORY () { 8 }
     sub ERROR_INVALID_PARAMETER () { 87 }
@@ -101,7 +101,7 @@ sub new {
     my $self = {};
     if(! defined $hproc){
         if (ISCYG() and $dll ne File::Basename::basename($dll)) {
-
+    
             # need to convert $dll to win32 path
             # isn't there an API for this?
             my $newdll = `cygpath -w "$dll"`;
@@ -109,7 +109,7 @@ sub new {
             DEBUG "(PM)new: converted '$dll' to\n  '$newdll'\n" if DEBUGCONST;
             $dll = $newdll;
         }
-
+    
         #### avoid loading a library more than once
         if (exists($Libraries{$dll})) {
             DEBUG "Win32::API::new: Library '$dll' already loaded, handle=$Libraries{$dll}\n" if DEBUGCONST;
@@ -121,7 +121,7 @@ sub new {
             $freedll = 1;
     #        $Libraries{$dll} = $hdll;
         }
-
+    
         #### if the dll can't be loaded, set $! to Win32's GetLastError()
         if (!$hdll) {
             $! = Win32::GetLastError();
@@ -162,7 +162,7 @@ sub new {
             }
         }#'V' must be one and ONLY letter for "in"
         foreach(@{$self_in}){
-            if($_ == 0){
+            if($_ == 0){ 
                 if(@{$self_in} != 1){
                     Win32::API::FreeLibrary($hdll) if $freedll;
                     die "Win32::API 'V' for in prototype must be the only parameter";
@@ -176,16 +176,16 @@ sub new {
     if(!$hproc){ #if not non DLL func
         #### first try to import the function of given name...
         $hproc = Win32::API::GetProcAddress($hdll, $proc);
-
+    
         #### ...then try appending either A or W (for ASCII or Unicode)
         if (!$hproc) {
             my $tproc = $proc;
             $tproc .= (IsUnicode() ? "W" : "A");
-
+    
             # print "Win32::API::new: procedure not found, trying '$tproc'...\n";
             $hproc = Win32::API::GetProcAddress($hdll, $tproc);
         }
-
+    
         #### ...if all that fails, give up, $! setting is back compat, $! is deprecated
         if (!$hproc) {
             my $err = $! = Win32::GetLastError();
@@ -529,7 +529,7 @@ sub parse_prototype {
 
         DEBUG "(PM)parse_prototype: got PROC '%s'\n",   $proc if DEBUGCONST;
         DEBUG "(PM)parse_prototype: got PARAMS '%s'\n", $params if DEBUGCONST;
-
+        
         foreach my $param (split(/\s*,\s*/, $params)) {
             my ($type, $name);
             #match "in_t* _var" "in_t * _var" "in_t *_var" "in_t _var" "in_t*_var" supported
@@ -622,9 +622,9 @@ sub parse_prototype {
 # relative path initially, later SxS can load a DLL with a different full path
 # yet same file name, and then LoadLibrary'ing the original relative path
 # might increase the refcount on the wrong DLL or return a different HMODULE
-sub CLONE {
+sub CLONE { 
     return if $_[0] ne "Win32::API";
-
+    
     _my_cxt_clone();
     foreach( keys %Libraries){
         if($Libraries{$_} != Win32::API::LoadLibrary(Win32::API::GetModuleFileName($Libraries{$_}))){
@@ -642,3 +642,4 @@ __END__
 #
 
 #line 1474
+

@@ -14,11 +14,11 @@ our @ISA = qw(Exporter);
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
 our %EXPORT_TAGS = ( 'all' => [ qw(
-	FindFile
+	FindFile 
 	ReadDir
 	FileTime
 	FileData
-	wchar
+	wchar 
 	uchar
 	wfchar
 
@@ -29,8 +29,8 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 	CreateDirectory
 
 	GetFullPathName
-	GetCurrentDirectory
-	SetCurrentDirectory
+	GetCurrentDirectory 
+	SetCurrentDirectory 
 
 	GetBinaryType
 	GetCompressedFileSize
@@ -46,9 +46,9 @@ our %EXPORT_TAGS = ( 'all' => [ qw(
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our @EXPORT = qw(
-	FindFile FileData FileTime
+	FindFile FileData FileTime	
 );
-use constant {
+use constant { 
     FileData => __PACKAGE__ . '::' .'_WFD',
     FileTime => __PACKAGE__ . '::' .'_WFT',};
 

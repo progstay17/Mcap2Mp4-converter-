@@ -175,3 +175,4 @@ L<Image::ExifTool::TagNames/PPM Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

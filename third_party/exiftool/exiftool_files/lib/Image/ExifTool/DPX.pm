@@ -244,3 +244,4 @@ L<Image::ExifTool::TagNames/DPX Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

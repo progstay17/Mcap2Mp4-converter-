@@ -360,3 +360,4 @@ L<Image::ExifTool::TagNames/OpenEXR Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

@@ -10768,3 +10768,4 @@ L<Image::ExifTool::TagNames/QuickTime Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

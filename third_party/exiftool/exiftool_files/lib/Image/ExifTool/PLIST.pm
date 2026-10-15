@@ -545,3 +545,4 @@ L<Image::ExifTool::TagNames/PLIST Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

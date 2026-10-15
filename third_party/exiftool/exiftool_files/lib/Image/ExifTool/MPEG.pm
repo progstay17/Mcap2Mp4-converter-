@@ -732,3 +732,4 @@ L<MP3::Info(3pm)|MP3::Info>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

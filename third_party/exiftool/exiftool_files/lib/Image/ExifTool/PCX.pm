@@ -135,3 +135,4 @@ L<Image::ExifTool::TagNames/PCX Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

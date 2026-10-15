@@ -3837,3 +3837,4 @@ L<Image::ExifTool::TagNames/Sony rtmd Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

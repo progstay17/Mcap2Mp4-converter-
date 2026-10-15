@@ -182,3 +182,4 @@ L<Image::ExifTool::TagNames/XISF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

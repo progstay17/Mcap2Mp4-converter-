@@ -375,3 +375,4 @@ L<Image::ExifTool::AIFF(3pm)|Image::ExifTool::AIFF>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

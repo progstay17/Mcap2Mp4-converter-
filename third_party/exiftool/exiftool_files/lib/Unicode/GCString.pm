@@ -28,7 +28,7 @@ use Unicode::LineBreak;
 # The package version
 our $VERSION = '2013.10';
 
-use overload
+use overload 
     '@{}' => \&as_arrayref,
     '${}' => \&as_scalarref,
     '""' => \&as_string,

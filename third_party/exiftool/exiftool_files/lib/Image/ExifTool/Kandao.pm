@@ -396,3 +396,4 @@ L<Image::ExifTool::TagNames/Kandao Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

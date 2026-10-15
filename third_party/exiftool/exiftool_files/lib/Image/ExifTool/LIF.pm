@@ -158,3 +158,4 @@ L<Image::ExifTool::TagNames/LIF Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

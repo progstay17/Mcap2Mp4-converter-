@@ -1586,3 +1586,4 @@ L<Image::ExifTool::TagNames/EXE Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

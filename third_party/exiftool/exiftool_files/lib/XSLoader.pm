@@ -90,7 +90,7 @@ sub load {
     # in this perl code simply because this was the last perl code
     # it executed.
 
-    my $libref = dl_load_file($file, 0) or do {
+    my $libref = dl_load_file($file, 0) or do { 
         require Carp;
         Carp::croak("Can't load '$file' for module $module: " . dl_error());
     };

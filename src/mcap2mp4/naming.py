@@ -17,8 +17,13 @@ def topic_label(topic: str) -> str:
     """'/a/cam/0' -> 'a_cam_0'."""
     return sanitize(topic.strip("/").replace("/", "_"))
 
+class NameCollisionError(ValueError):
+    pass
+
+
 def build_names(stem: str, topics: list[str], pattern: str | None = None,
-                date: datetime | None = None, extension: str = ".mp4") -> dict[str, str]:
+                date: datetime | None = None, extension: str = ".mp4",
+                fail_on_collision: bool = False) -> dict[str, str]:
     """Kembalikan {topik: nama_file}. Satu channel -> {nama}.mp4; banyak -> {nama}_{topik}.mp4."""
     if pattern is None:
         pattern = "{nama}" if len(topics) == 1 else "{nama}_{topik}"
@@ -29,6 +34,8 @@ def build_names(stem: str, topics: list[str], pattern: str | None = None,
         base = sanitize(base)[:MAX_BASE].rstrip(" .") or "rekaman"
         name, n = base, 2
         while (name + extension).lower() in used:      # tabrakan nama -> nomor otomatis
+            if fail_on_collision:
+                raise NameCollisionError(f"nama keluaran bentrok: {name}{extension}")
             name, n = f"{base}_{n}", n + 1
         used.add((name + extension).lower())
         out[topic] = name + extension

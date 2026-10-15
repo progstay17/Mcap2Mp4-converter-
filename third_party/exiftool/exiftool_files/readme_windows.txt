@@ -11,6 +11,6 @@ It consists of:
 See https://exiftool.org/ and https://strawberryperl.com/ for the license of ExifTool and Strawberry Perl.
 The launcher is licensed under the https://creativecommons.org/publicdomain/zero/1.0/legalcode CC0 license
 
-I make no warranties about the package, and disclaim liability for all uses of the package, to the fullest extent permitted by applicable law.
+I make no warranties about the package, and disclaim liability for all uses of the package, to the fullest extent permitted by applicable law. 
 
 Oliver Betz

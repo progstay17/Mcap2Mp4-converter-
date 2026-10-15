@@ -316,3 +316,4 @@ L<Image::ExifTool::TagNames/WTV Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

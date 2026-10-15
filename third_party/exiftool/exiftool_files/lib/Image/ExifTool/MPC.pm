@@ -153,3 +153,4 @@ L<Image::ExifTool::TagNames/MPC Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

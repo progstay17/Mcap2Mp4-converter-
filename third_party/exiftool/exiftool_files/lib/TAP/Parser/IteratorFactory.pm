@@ -336,3 +336,4 @@ L<TAP::Parser::SourceHandler::Handle>,
 L<TAP::Parser::SourceHandler::Executable>
 
 =cut
+

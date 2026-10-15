@@ -503,3 +503,4 @@ L<Image::ExifTool::TagNames/PhotoCD Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

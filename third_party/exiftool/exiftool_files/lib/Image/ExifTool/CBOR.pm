@@ -348,3 +348,4 @@ L<Image::ExifTool::TagNames/CBOR Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

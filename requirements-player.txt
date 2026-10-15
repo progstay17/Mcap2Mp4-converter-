@@ -1,0 +1,1 @@
+python-vlc>=3.0.20          # pembungkus ctypes untuk libVLC (pemutar, M7); libvlc.dll + plugins disertakan paket (build/fetch_vlc.py)

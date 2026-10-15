@@ -2303,3 +2303,4 @@ L<Image::ExifTool::TagNames/CanonVRD Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

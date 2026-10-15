@@ -159,3 +159,4 @@ L<TAP::Parser::Iterator::Stream>,
 L<TAP::Parser::Iterator::Process>,
 
 =cut
+

@@ -920,3 +920,4 @@ L<Image::ExifTool::Canon(3pm)|Image::ExifTool::Canon>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
+

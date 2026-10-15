@@ -57,11 +57,11 @@ For detailed steps and troubleshooting, read the [installation guide](docs/INSTA
 | Need | Use |
 |---|---|
 | Convert files interactively | Windows GUI |
-| Run a version check or automate a workflow | \`mcap2mp4-cli.exe\` |
-| Inspect conversion options | Run \`mcap2mp4-cli.exe --help\` |
+| Run a version check or automate a workflow | `mcap2mp4-cli.exe` |
+| Inspect conversion options | Run `mcap2mp4-cli.exe --help` |
 | Check the latest changes | [Changelog](docs/CHANGELOG.md) |
 
-The command-line interface supports \`--version\`; consult \`--help\` from your installed build for the exact options available.
+The command-line interface supports `--version`; consult `--help` from your installed build for the exact options available.
 
 ## Compatibility notes
 
@@ -76,26 +76,26 @@ If a file fails, keep the original MCAP unchanged and review the app output/logs
 
 Requirements: Python 3.12, Windows for the packaged installer workflow, and the project dependencies.
 
-\`\`\`powershell
+```powershell
 py -3.12 -m venv .venv
 .\\.venv\\Scripts\\Activate.ps1
 python -m pip install -r requirements-dev.txt
 python -m unittest discover tests
 python -m mcap2mp4 --help
-\`\`\`
+```
 
-The Windows packaging workflow is in [\`.github/workflows/build-windows.yml\`](.github/workflows/build-windows.yml). See the \`build/\` directory for packaging scripts and the \`docs/\` directory for design and implementation notes.
+The Windows packaging workflow is in [`.github/workflows/build-windows.yml`](.github/workflows/build-windows.yml). See the `build/` directory for packaging scripts and the `docs/` directory for design and implementation notes.
 
 ## Project map
 
 | Path | Purpose |
 |---|---|
-| \`src/mcap2mp4/\` | Application and conversion code |
-| \`tests/\` | Automated tests and test fixtures |
-| \`docs/\` | Product requirements, release notes, installation, and troubleshooting |
-| \`build/\` | Packaging and Windows installer scripts |
-| \`i18n/\` | Indonesian, English, and Simplified Chinese strings |
-| \`third_party/\` | Bundled third-party utilities |
+| `src/mcap2mp4/` | Application and conversion code |
+| `tests/` | Automated tests and test fixtures |
+| `docs/` | Product requirements, release notes, installation, and troubleshooting |
+| `build/` | Packaging and Windows installer scripts |
+| `i18n/` | Indonesian, English, and Simplified Chinese strings |
+| `third_party/` | Bundled third-party utilities |
 
 ## Documentation
 

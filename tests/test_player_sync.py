@@ -235,8 +235,8 @@ class FileManagerTests(unittest.TestCase):
         r = recs[0]
         self.assertEqual((r.title, r.kind, r.part_count, r.camera_count), ("ego_0014~ego_0015", "session", 2, 2))
         self.assertAlmostEqual(r.duration_s, 6.0, delta=0.05)
-        self.assertEqual(r.parts[0].paths[0].split("/")[-1], "ego_0014_ego_camera_0.mp4")
-        self.assertEqual(r.parts[1].paths[1].split("/")[-1], "ego_0015_ego_camera_1.mp4")
+        self.assertEqual(Path(r.parts[0].paths[0]).name, "ego_0014_ego_camera_0.mp4")
+        self.assertEqual(Path(r.parts[1].paths[1]).name, "ego_0015_ego_camera_1.mp4")
 
     def test_plain_mp4_plays_as_single_camera(self):
         d = self.d / "plain"; d.mkdir()

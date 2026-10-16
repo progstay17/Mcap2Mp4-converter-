@@ -11,8 +11,12 @@ jobs:
       - run: choco install nsis -y --no-progress
       - run: pyinstaller build/mcap2mp4.spec --noconfirm
       - run: dist\MCAP2MP4\mcap2mp4-cli.exe --version
-      - run: |
-          New-Item -ItemType Directory -Force dist\installer | Out-Null
-          & "C:\Program Files (x86)\NSIS\makensis.exe" -DVERSION=0.3.2 build\installer.nsi
+      - name: Build installer
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path "dist/installer" | Out-Null
+          & "C:\Program Files (x86)\NSIS\makensis.exe" "-DVERSION=0.3.2" "-DOUTFILE=dist\installer\MCAP2MP4-Setup-0.3.2.exe" "build\installer.nsi"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path "dist/installer/MCAP2MP4-Setup-0.3.2.exe")) { throw "Installer output was not created." }
       - uses: actions/upload-artifact@v4
         with: { name: MCAP2MP4-Setup-0.3.2, path: dist/installer/*.exe }

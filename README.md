@@ -12,7 +12,7 @@ A Windows desktop application and CLI for converting MCAP camera recordings to M
 
 ![Version](https://img.shields.io/badge/version-0.3.2-D4F53C?style=for-the-badge&labelColor=0B0D12)
 ![Platform](https://img.shields.io/badge/platform-Windows-0B0D12?style=for-the-badge)
-![Interface](https://img.shields.io/badge/interface-GUI%20%2B%20CLI-0B0D12?style=for-the-badge)
+![Interface](https://img.shields.io/badge/interface-GUI%20%2B%20CLI-0B0D12?style=for-the-badge)\n[![Tests](https://github.com/progstay17/Mcap2Mp4-converter-/actions/workflows/tests.yml/badge.svg)](https://github.com/progstay17/Mcap2Mp4-converter-/actions/workflows/tests.yml)
 
 </div>
 

@@ -6,3 +6,12 @@ dist/
 samples/*.mcap
 *.partial
 build/version_info.generated.txt
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.log
+.env
+.env.*
+!.env.example
